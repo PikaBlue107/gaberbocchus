@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DockPosts.png-eec07219f8853978db2d324db742dd7a.stex"
+path="res://.import/DockPosts.png-c41e250b74bf87ebec15149e536f4c57.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Environments/Dock/DockPosts.png"
-dest_files=[ "res://.import/DockPosts.png-eec07219f8853978db2d324db742dd7a.stex" ]
+source_file="res://world/environments/dock/DockPosts.png"
+dest_files=[ "res://.import/DockPosts.png-c41e250b74bf87ebec15149e536f4c57.stex" ]
 
 [params]
 

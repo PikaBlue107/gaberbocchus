@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DockBackground.png-d00e6c35621528cac78bd39bfebe5dfe.stex"
+path="res://.import/DockBackground.png-6372da3b1f4ed7b715ea377511570067.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Environments/Dock/DockBackground.png"
-dest_files=[ "res://.import/DockBackground.png-d00e6c35621528cac78bd39bfebe5dfe.stex" ]
+source_file="res://world/environments/dock/DockBackground.png"
+dest_files=[ "res://.import/DockBackground.png-6372da3b1f4ed7b715ea377511570067.stex" ]
 
 [params]
 

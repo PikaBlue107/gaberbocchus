@@ -8,15 +8,31 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Hitbox",
+"language": "GDScript",
+"path": "res://world/utils/physics/hitbox/Hitbox.gd"
+}, {
+"base": "Area2D",
+"class": "Hurtbox",
+"language": "GDScript",
+"path": "res://world/utils/physics/hurtbox/Hurtbox.gd"
+} ]
+_global_script_class_icons={
+"Hitbox": "",
+"Hurtbox": ""
+}
+
 [application]
 
 config/name="Gaberbocchus"
-run/main_scene="res://World.tscn"
+run/main_scene="res://world/World.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-PlayerStats="*res://Player/PlayerStats.tscn"
+PlayerStats="*res://world/characters/player/PlayerStats.tscn"
 
 [display]
 

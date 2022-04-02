@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIFull.png-b25177cfdf6a5c680b4d4502ddbd78dd.stex"
+path="res://.import/SeagullSmall.png-38bb7c72e7989f14e429b76e4e72024e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/HeartUIFull.png"
-dest_files=[ "res://.import/HeartUIFull.png-b25177cfdf6a5c680b4d4502ddbd78dd.stex" ]
+source_file="res://world/objects/seagull/SeagullSmall.png"
+dest_files=[ "res://.import/SeagullSmall.png-38bb7c72e7989f14e429b76e4e72024e.stex" ]
 
 [params]
 
