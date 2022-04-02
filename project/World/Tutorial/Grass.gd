@@ -6,12 +6,15 @@ extends Sprite
 # var b = "text"
 
 # load the GrassEffectScene we'll use to perish ourselves
-onready var GrassEffectScene = load("res://Effects/GrassEffect.tscn")
+#onready var GrassEffectScene = load("res://Effects/GrassEffect.tscn")
+
+const GrassEffectScene = preload("res://Effects/GrassEffect.tscn")
 
 	
 func create_grass_effect():
 	var grassEffect = GrassEffectScene.instance()
-	get_tree().current_scene.add_child(grassEffect)
+#	get_tree().current_scene.add_child(grassEffect)
+	get_parent().add_child(grassEffect)
 	grassEffect.global_position = global_position
 
 

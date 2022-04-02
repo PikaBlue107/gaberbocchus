@@ -2,17 +2,19 @@ extends KinematicBody2D
 
 
 # Acceleration applied when moving
-const ACCELERATION = 1200 # units movement ^2 per unit real time
+export(float) var ACCELERATION = 1000 # units movement ^2 per unit real time
 # Friction for slowdown
-const FRICTION = 900 # units movement ^2 per unit real time
+export(float) var FRICTION = 1000 # units movement ^2 per unit real time
 # Move speed
-const MAX_SPEED = 80 # units movement per unit real time
+export(float) var MAX_SPEED = 120 # units movement per unit real time
 # Roll speed
-const ROLL_SPEED = MAX_SPEED * 1.5
+export(float) var ROLL_SPEED = MAX_SPEED * 1.5
 # Used to update position every frame
 var velocity = Vector2.ZERO
 # remember direction we're facing
-var facing = Vector2.LEFT
+var facing = Vector2.DOWN
+
+# State machine
 
 enum {
 	MOVE,
@@ -30,8 +32,17 @@ onready var animationPlayer = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var anim_state = anim_tree.get("parameters/playback")
 
+onready var swordHitbox = $HitboxPivot/SwordHitbox
+onready var hurtbox = $Hurtbox
+
+# Stats
+
+var stats = PlayerStats
+
 func _ready():
 	anim_tree.active = true
+	swordHitbox.knockback_vector = facing
+	stats.connect("no_health", self, "queue_free")
 
 
 
@@ -60,6 +71,7 @@ func move_state(delta):
 	# if some input applied
 	if input_vector != Vector2.ZERO:
 		facing = input_vector
+		swordHitbox.knockback_vector = facing
 		# accelerate in direction of movement
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 		# play animation to move
@@ -82,10 +94,11 @@ func move_state(delta):
 	
 	
 	# Handle state changes
-#	if Input.is_action_just_pressed("attack"):
-#		state = ATTACK
-#	elif Input.is_action_just_pressed("roll"):
-#		state = ROLL
+	if Input.is_action_just_pressed("attack"):
+		state = ATTACK
+	elif Input.is_action_just_pressed("roll"):
+
+		state = ROLL
 
 func roll_state(delta):
 	velocity = facing * ROLL_SPEED
@@ -113,3 +126,10 @@ func attack_state_end():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Hurtbox_area_entered(area):
+	if !hurtbox.invincible:
+		stats.health -= area.damage
+		hurtbox.start_invincibility(0.5)
+		hurtbox.create_hit_effect()
