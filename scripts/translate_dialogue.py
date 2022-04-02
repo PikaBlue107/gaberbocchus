@@ -53,10 +53,6 @@ OPTIONS_KEY = 'options'
 # Debug printouts
 DEBUG = False
 
-# Behavior flags
-infile_path = None
-outfile_path = None
-
 def is_context(entry_lines: List[str]) -> bool:
   """Returns `True` if `entry_lines` is `[ "\[.*?\]" ]`; otherwise `False`"""
   return (len(entry_lines) == 1
@@ -266,7 +262,7 @@ def parse_args():
   return parser.parse_args()
 
 def main():
-  """Main program control flow."""
+  """Main program control flow. Handle mode switching and high-level functionality"""
   # parse arguments
   args = parse_args()
   print(args)
