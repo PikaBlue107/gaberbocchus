@@ -1,0 +1,20 @@
+{
+  "dialogue_name": "TOWN SCENE - Street 3",
+  
+  "sequence": [
+    {
+      "speaker": "HESCHIER",
+      "text": "‘Twas brillig, and the slithy toves… plurima gyrabant gymbolitare vabo..."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "I don’t understand."
+    },
+    
+    {
+      "speaker": "HESCHIER",
+      "text": "CAVE! She may be too late already."
+    }
+  ]
+}

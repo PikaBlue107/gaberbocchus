@@ -1,0 +1,40 @@
+{
+  "dialogue_name": "TOWN SCENE - Butcher Pansy",
+  
+  "sequence": [
+    {
+      "speaker": "PANSY",
+      "text": "Hey there, hi there! Name’s Pansy, ‘cause you can’t be one of those if you got this kind of job. What can I do for ya?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Just saying hi."
+    },
+    
+    {
+      "speaker": "PANSY",
+      "text": "Well hi there, Lucy!"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Hi, Pansy!"
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "...Her name is Lucia, actually."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Don't bother. Pansy, this is my brother Adel."
+    },
+    
+    {
+      "speaker": "PANSY",
+      "text": "Nice to meetcha, Aiden!"
+    }
+  ]
+}

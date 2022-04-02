@@ -1,0 +1,12 @@
+{
+  "dialogue_name": "TOWN EXAMINE: Apothecary - Forest Monster Head",
+  
+  "sequence": [
+    {
+      "text": "The head of a strange creature… probably one of the forest monsters Lucia was talking about. Why did she keep its head, though?"
+    },
+    {
+      "text": "...Meh, she’s always been a little weird."
+    }
+  ]
+}

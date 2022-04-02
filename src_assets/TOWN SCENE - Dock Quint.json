@@ -1,0 +1,40 @@
+{
+  "dialogue_name": "TOWN SCENE - Dock Quint",
+  
+  "sequence": [
+    {
+      "speaker": "QUINT",
+      "text": "Fresh off the boat, aye? Welcome to Eventyr."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "Thanks."
+    },
+    
+    {
+      "speaker": "QUINT",
+      "text": "…Run into any sharks? I haven’t seen ‘em yet, but I know they’re out there. Big ones. Swallow you whole."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "What?"
+    },
+    
+    {
+      "speaker": "QUINT",
+      "text": "One of these days, I’m gonna tell the kids I’m going fishing and catch myself something real big."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "...Okay?"
+    },
+    
+    {
+      "speaker": "QUINT",
+      "text": "I’m gonna need a bigger fishing rod."
+    }
+  ] 
+}

@@ -1,0 +1,111 @@
+{
+  "dialogue_name": "STORY SCENE 3 - Spirit Dream Sequence",
+  
+  "sequence": [
+    {
+      "type": "context",
+      "text": "[Black]"
+    },
+    
+    {
+      "speaker": "???",
+      "text": "Adel."
+    },
+    
+    {
+      "speaker": "???",
+      "text": "Hello, Adel."
+    },
+    
+    {
+      "type": "context",
+      "text": "[Dream world appears]"
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "Isn't it lovely?"
+    },
+    
+    {
+      "type": "context",
+      "text": "[Pause]"
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "I have a proposal for you, Adel."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "You see… I’m afraid that Eventyr’s great peril is my fault."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "Once, I was something more than this… I was a powerful spirit. A ruler, over a great stone city, with the forest as my domain."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "But my subjects wanted more. I was attacked. Nearly murdered. Nearly killed, for nothing more than a bloodied dream of conquest."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "I am forced to remain like this… small and forgotten. I have even forgotten my home. But you could help me, Adel, and in doing so, help Eventyr. Help your sister and her beloved town. Be the hero they’re so desperate for."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "I will give you power. Power and guidance. Abilities beyond anything you’ve ever seen… and the wisdom of a once-great spirit, for whatever that is worth to you."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "All I ask in return is that you take me home."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "If I can reclaim my home, my former subjects… my former people… they will not be a danger to you anymore. I’m certain of it."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "Please, Adel."
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "text": "Everyone needs you."
+    },
+    
+    {
+      "speaker": "ACCEPT?",
+      "type": "choice_response",
+      "choices": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "No"
+        }
+      ]
+    },
+    
+    {
+      "speaker": "SPIRIT",
+      "type": "choice_response",
+      "responses": [
+        {
+          "text": "Thank you."
+        },
+        {
+          "text": "Very well."
+        }
+      ]
+    }
+  ]
+}
