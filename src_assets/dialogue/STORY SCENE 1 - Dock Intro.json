@@ -1,0 +1,71 @@
+{
+  "dialogue_name": "STORY SCENE 1 - Dock Intro",
+  
+  "sequence": [
+    {
+      "type": "context",
+      "text": "[Adel is either on dock, or can walk from boat to dock.]"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Hey! Heeeey! Adel!"
+    },
+    
+    {
+      "type": "context",
+      "text": "[Lucia comes running up to Adel → joins, begins following]"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Welcome to Eventyr! Glad you’re alive. And I’m only saying this once, so listen up: Thank you so much for coming out here for me."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "type": "choice",
+      "choices": [
+        {
+          "text": "No problem. "
+        },
+        {
+          "text": "Sorry, couldn’t hear you, wanna say that again?"
+        }
+      ]
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "type": "choice_response",
+      "responses": [
+        {
+          "text": "Yes problem, actually, we have so many problems."
+        },
+        {
+          "text": "Nope! I don’t know what you’re talking about."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "What do you need me for? Your letters are always so vague."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "I have a right as your sister to be as vague as I please, but I’ll tell you later—once we’re not out in the open. Get yourself situated around town first, and we can head to the apothecary once you’re done. I’ll explain everything there."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "Is that really necessary?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Yes."
+    }
+  ]
+}
