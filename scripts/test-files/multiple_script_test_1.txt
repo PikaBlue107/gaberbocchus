@@ -1,0 +1,156 @@
+STORY SCENES
+Necessary, required for progress.
+
+STORY SCENE 1: Dock Intro
+
+[Adel is either on dock, or can walk from boat to dock.]
+
+LUCIA
+Hey! Heeeey! Adel!
+
+[Lucia comes running up to Adel → joins, begins following]
+
+LUCIA
+Welcome to Eventyr! Glad you’re alive. And I’m only saying this once, so listen up: Thank you so much for coming out here for me. 
+
+ADEL
+No problem. 
+Sorry, couldn’t hear you, wanna say that again? 
+
+LUCIA
+Yes problem, actually, we have so many problems. 
+Nope! I don’t know what you’re talking about.
+
+ADEL
+What do you need me for? Your letters are always so vague. 
+
+LUCIA
+I have a right as your sister to be as vague as I please, but I’ll tell you later—once we’re not out in the open. Get yourself situated around town first, and we can head to the apothecary once you’re done. I’ll explain everything there. 
+
+ADEL
+Is that really necessary?
+
+LUCIA
+Yes. 
+
+(End)
+
+
+
+STORY SCENE 2: Apothexposition
+
+[Adel and Lucia enter the apothecary.]
+
+LUCIA
+Welcome to my humble shop. Also known as the only reason anyone in this town is still alive. 
+
+ADEL
+Wow, that’s a lot of books.
+…You deal with a lot of injuries here?
+
+LUCIA
+Obviously I’ve got a lot of books, Adel, you don’t learn decades-worth of medical knowledge through trial and error. 
+Yeah, Pansy has a tendency to get into knife accidents. Ironically, pansies are really only useful for skin and lung diseases. I use marigolds for her.
+
+ADEL
+…Okay. Anyway. You said something about explaining? 
+
+LUCIA
+Right. 
+
+LUCIA
+We’re under siege. Or we’re about to be, anyway. 
+
+LUCIA
+There are… creatures in the forest. Dangerous ones. They used to stay in the deep woods, but they’ve become restless as of late… destroying crops, attacking townsfolk. One of them almost killed Sister Margaret. Couldn’t move her arm for weeks… I did what I could, of course. 
+
+LUCIA
+But we’re just not safe. 
+
+ADEL
+What do you need me for? I can protect you just fine, but I can’t be everywhere at once.
+
+LUCIA
+I think I know how to stop it. But I can’t do it myself. I can’t fight those things. And… and I love this town, but the people here just don’t have your skill. 
+
+LUCIA
+Most of the town avoids heading out to the woods, but I need to gather my herbs. There’s only so much you can garden. So I’m familiar with the area, to say the least. There are ruins everywhere in the deep woods—some kind of destroyed city. It’s been abandoned for a long time. 
+
+LUCIA
+But the monsters are coming from there, I’m certain of it. And if we can find the source…
+
+ADEL
+We can end it. 
+
+LUCIA
+Exactly. Are you in? 
+
+ADEL
+Got nothing better to do. 
+You sure about this? I’m only in if you’re sure.
+
+LUCIA
+Alright. Tomorrow, then. Tonight, just… get some sleep. Head upstairs.
+As sure as I’ve ever been. Head upstairs, get some sleep.
+
+(End)
+
+
+STORY SCENE 3: Spirit Dream Sequence
+
+[Black?]
+
+???
+Adel. 
+
+???
+Hello, Adel. 
+
+[Dream world appears?]
+
+SPIRIT
+Isn’t it lovely?
+
+[Pause.]
+
+SPIRIT
+I have a proposal for you, Adel.
+
+SPIRIT
+You see… I’m afraid that Eventyr’s great peril is my fault. 
+
+SPIRIT
+Once, I was something more than this… I was a powerful spirit. A ruler, over a great stone city, with the forest as my domain. 
+
+SPIRIT
+But my subjects wanted more. I was attacked. Nearly murdered. Nearly killed, for nothing more than a bloodied dream of conquest. 
+
+SPIRIT
+I am forced to remain like this… small and forgotten. I have even forgotten my home. But you could help me, Adel, and in doing so, help Eventyr. Help your sister and her beloved town. Be the hero they’re so desperate for. 
+
+SPIRIT
+I will give you power. Power and guidance. Abilities beyond anything you’ve ever seen… and the wisdom of a once-great spirit, for whatever that is worth to you.
+
+SPIRIT
+All I ask in return is that you take me home. 
+
+SPIRIT
+If I can reclaim my home, my former subjects… my former people… they will not be a danger to you anymore. I’m certain of it. 
+
+SPIRIT
+Please, Adel. 
+
+SPIRIT
+Everyone needs you. 
+
+[Pop-up choice]
+
+ACCEPT THE OFFER? 
+Yes
+No
+
+SPIRIT
+Thank you.
+Very well. 
+
+(End)

@@ -1,0 +1,9 @@
+TOWN SCENE: Street 2
+
+HESCHIER
+Beware the Jabberwock, my son! The jaws that bite, the claws that catch!
+
+ADEL
+...?
+
+(End)

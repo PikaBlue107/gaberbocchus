@@ -1,0 +1,220 @@
+TOWN SCENES
+Optional, via exploration around Eventyr. This is for Intro only—town dialogue will change after leaving and returning. 
+
+TOWN SCENE: Dock 1
+
+QUINT
+Fresh off the boat, aye? Welcome to Eventyr. 
+
+ADEL
+Thanks. 
+
+QUINT
+…Run into any sharks? I haven’t seen ‘em yet, but I know they’re out there. Big ones. Swallow you whole. 
+
+ADEL
+What?
+
+QUINT
+One of these days, I’m gonna tell the kids I’m going fishing and catch myself something real big. 
+
+ADEL
+…Okay?
+
+QUINT
+I’m gonna need a bigger fishing rod. 
+
+(End)
+
+TOWN SCENE: Dock 2
+
+DOC HANDE
+Hey, welcome to Eventyr. Lucia, this the brother you mentioned? 
+
+LUCIA
+Sure is! Adel, say hello to Doc.
+
+ADEL
+Hello to Doc.
+
+LUCIA
+Ha. Ha. Very funny. 
+
+DOC HANDE
+Good luck, Adel. You’re gonna need it. 
+
+(End)
+
+
+TOWN SCENE: Butcher
+
+PANSY
+Hey there, hi there! Name’s Pansy, ‘cause you can’t be one of those if you got this kind of job. What can I do for ya?
+
+LUCIA
+Just saying hi. 
+
+PANSY
+Well hi there, Lucy!
+
+LUCIA
+Hi, Pansy!
+
+ADEL
+…Her name is Lucia, actually. 
+
+LUCIA
+Don’t bother. Pansy, this is my brother Adel. 
+
+PANSY
+Nice to meetcha, Aiden!
+
+(End)
+
+
+TOWN SCENE: Church 1
+
+MARGARET
+Hello, Lucia. Is this…?
+
+LUCIA
+Sister! It’s great to see you feeling better!
+
+MARGARET
+I’m as well as can be expected. 
+
+LUCIA
+Thank goodness. Oh, right—this is my brother, Adel. Adel, say hello. 
+
+ADEL
+Hello. 
+
+MARGARET
+It’s a great relief that you’re here, Adel. I will be praying for your journey. And for you, since you will be accompanied by Lucia. 
+
+LUCIA
+Hey!
+
+MARGARET
+Only kidding. 
+
+(End)
+
+
+TOWN SCENE: Church 2
+
+MARGARET
+And before you ask, no, I don’t have a blind son. 
+
+ADEL 
+What?
+
+MARGARET
+Especially not one that does parkour. 
+
+(End)
+
+
+TOWN SCENE: Blacksmith 
+
+FERRUM
+Well, if it isn’t the bunny rabbit herself. How are you, Lucia? 
+
+LUCIA
+Just fine. 
+
+FERRUM
+Great to hear. How’s my order?
+
+LUCIA
+Fermenting. Give me another day or two, I’ll have it ready.
+
+FERRUM
+Sounds good. This the infamous brother?
+
+ADEL
+Infamous?
+
+FERRUM
+Lucia likes to talk. 
+
+ADEL
+Let’s just say I’ve noticed. 
+
+LUCIA
+Yes, this is Adel, my very non-famous brother. 
+
+FERRUM
+Good to finally meet you.
+
+(End)
+
+
+TOWN SCENE: Farm or Wherever you meet the farmer
+
+JIMSON
+Why, hello there!
+
+LUCIA
+If it isn’t Jimson Fiskars!
+
+JIMSON
+It always is.
+
+LUCIA
+I want you to meet my brother Adel. 
+
+JIMSON
+You seem like a hardy kid. At least you’re tall. Fancy a pitchfork, boy? 
+
+LUCIA
+(Say no, say no, say no—)
+
+JIMSON
+Did you know there are eleven kinds of pitchforks? I got ‘em all! One would go real well with that hat of yours.
+
+ADEL
+Sure, I’ll take a pitchfork.
+No thanks. 
+
+LUCIA
+No. You’re already armed. I don’t need you in possession of any more sharp objects. Thanks Jimson, but we’ll be leaving now. 
+Oh no, how sad, so sorry Jimson, maybe next time. 
+
+JIMSON
+Worth a try. 
+
+(End)
+
+
+TOWN SCENE: Street 1
+
+HESCHIER
+UNGUIBUS ILLE RAPIT, DENTIBUS ILLE NECAT!
+
+(End)
+
+
+TOWN SCENE: Street 2
+
+HESCHIER
+Beware the Jabberwock, my son! The jaws that bite, the claws that catch!
+
+ADEL
+…?
+
+(End)
+
+
+TOWN SCENE: Street 3
+
+HESCHIER
+‘Twas brillig, and the slithy toves… plurima gyrabant gymbolitare vabo…
+
+ADEL
+I don’t understand. 
+
+HESCHIER
+CAVE! She may be too late already. 
+
+(End)

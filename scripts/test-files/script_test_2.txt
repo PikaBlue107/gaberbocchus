@@ -1,0 +1,33 @@
+STORY SCENE 1: Dock Intro
+
+[Adel is either on dock, or can walk from boat to dock.]
+
+LUCIA
+Hey! Heeeey! Adel!
+
+[Lucia comes running up to Adel → joins, begins following]
+
+LUCIA
+Welcome to Eventyr! Glad you’re alive. And I’m only saying this once, so listen up: Thank you so much for coming out here for me. 
+
+ADEL
+No problem. 
+Sorry, couldn’t hear you, wanna say that again? 
+
+LUCIA
+Yes problem, actually, we have so many problems. 
+Nope! I don’t know what you’re talking about.
+
+ADEL
+What do you need me for? Your letters are always so vague. 
+
+LUCIA
+I have a right as your sister to be as vague as I please, but I’ll tell you later—once we’re not out in the open. Get yourself situated around town first, and we can head to the apothecary once you’re done. I’ll explain everything there. 
+
+ADEL
+Is that really necessary?
+
+LUCIA
+Yes. 
+
+(End)

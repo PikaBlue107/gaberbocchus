@@ -1,0 +1,58 @@
+STORY SCENE 3: Spirit Dream Sequence
+
+[Black?]
+
+???
+Adel. 
+
+???
+Hello, Adel. 
+
+[Dream world appears?]
+
+SPIRIT
+Isn’t it lovely?
+
+[Pause.]
+
+SPIRIT
+I have a proposal for you, Adel.
+
+SPIRIT
+You see… I’m afraid that Eventyr’s great peril is my fault. 
+
+SPIRIT
+Once, I was something more than this… I was a powerful spirit. A ruler, over a great stone city, with the forest as my domain. 
+
+SPIRIT
+But my subjects wanted more. I was attacked. Nearly murdered. Nearly killed, for nothing more than a bloodied dream of conquest. 
+
+SPIRIT
+I am forced to remain like this… small and forgotten. I have even forgotten my home. But you could help me, Adel, and in doing so, help Eventyr. Help your sister and her beloved town. Be the hero they’re so desperate for. 
+
+SPIRIT
+I will give you power. Power and guidance. Abilities beyond anything you’ve ever seen… and the wisdom of a once-great spirit, for whatever that is worth to you.
+
+SPIRIT
+All I ask in return is that you take me home. 
+
+SPIRIT
+If I can reclaim my home, my former subjects… my former people… they will not be a danger to you anymore. I’m certain of it. 
+
+SPIRIT
+Please, Adel. 
+
+SPIRIT
+Everyone needs you. 
+
+[Pop-up choice]
+
+ACCEPT THE OFFER? 
+Yes
+No
+
+SPIRIT
+Thank you.
+Very well. 
+
+(End)
