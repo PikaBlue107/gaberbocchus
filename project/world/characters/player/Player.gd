@@ -6,7 +6,7 @@ export(float) var ACCELERATION = 1000 # units movement ^2 per unit real time
 # Friction for slowdown
 export(float) var FRICTION = 1000 # units movement ^2 per unit real time
 # Move speed
-export(float) var MAX_SPEED = 120 # units movement per unit real time
+export(float) var MAX_SPEED = 60 # units movement per unit real time
 # Roll speed
 export(float) var ROLL_SPEED = MAX_SPEED * 1.5
 # Used to update position every frame
@@ -94,11 +94,10 @@ func move_state(delta):
 	
 	
 	# Handle state changes
-	if Input.is_action_just_pressed("attack"):
-		state = ATTACK
-	elif Input.is_action_just_pressed("roll"):
-
-		state = ROLL
+#	if Input.is_action_just_pressed("attack"):
+#		state = ATTACK
+#	elif Input.is_action_just_pressed("roll"):
+#		state = ROLL
 
 func roll_state(delta):
 	velocity = facing * ROLL_SPEED
