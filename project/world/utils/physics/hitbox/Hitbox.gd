@@ -40,7 +40,6 @@ func set_disabled(value: bool) -> void:
 #	print("in tree, setting disabled now...")
 #	$CollisionShape2D.disabled = disabled
 	if is_inside_tree():
-		print("inside tree, updating disabled")
 		$CollisionShape2D.disabled = disabled
 func get_disabled() -> bool:
 	if is_inside_tree():
