@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DockCharacters.png-ae4d35c705c491c31d687d8046de6735.stex"
+path="res://.import/DockCharacters.png-7c812e9354a5802f63ef2d87d93c98a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/characters/npcs/Dock/DockCharacters.png"
-dest_files=[ "res://.import/DockCharacters.png-ae4d35c705c491c31d687d8046de6735.stex" ]
+source_file="res://world/characters/npcs/dock/DockCharacters.png"
+dest_files=[ "res://.import/DockCharacters.png-7c812e9354a5802f63ef2d87d93c98a6.stex" ]
 
 [params]
 
