@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=2]
+
+[ext_resource path="res://ui/fonts/Avara.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 2 )
+Label/colors/font_color = Color( 0.196078, 0.180392, 0.180392, 1 )

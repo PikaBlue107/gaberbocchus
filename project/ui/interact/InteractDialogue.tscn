@@ -1,5 +1,122 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="InteractDialogue" type="Area2D"]
+[ext_resource path="res://ui/interact/dialogue_box_adjusted.png" type="Texture" id=1]
+[ext_resource path="res://ui/interact/faces/adel.png" type="Texture" id=2]
+[ext_resource path="res://ui/interact/dialogue_theme.tres" type="Theme" id=3]
+[ext_resource path="res://ui/interact/InteractDialogue.gd" type="Script" id=4]
+[ext_resource path="res://ui/interact/Choice.gd" type="Script" id=5]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.784314, 0.745098, 0.682353, 1 )
+
+[node name="InteractDialogue" type="Control"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+json_path = "res://ui/interact/dialogue_story_1_dock_intro.json"
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Face" type="TextureRect" parent="."]
+margin_left = 115.0
+margin_top = 3.0
+margin_right = 173.0
+margin_bottom = 61.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueText" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 633.0
+margin_bottom = 308.0
+rect_scale = Vector2( 0.16, 0.16 )
+theme = ExtResource( 3 )
+text = "Test Dialogue Text"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceOne" type="Label" parent="."]
+visible = false
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 633.0
+margin_bottom = 39.0
+rect_scale = Vector2( 0.16, 0.16 )
+mouse_filter = 1
+theme = ExtResource( 3 )
+text = "Test choice one"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceTwo" type="Label" parent="."]
+visible = false
+margin_left = 8.0
+margin_top = 18.0
+margin_right = 633.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.16, 0.16 )
+mouse_filter = 1
+theme = ExtResource( 3 )
+text = "Test choice two"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceThree" type="Label" parent="."]
+visible = false
+margin_left = 8.0
+margin_top = 28.0
+margin_right = 633.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.16, 0.16 )
+mouse_filter = 1
+theme = ExtResource( 3 )
+text = "Test choice three"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakerNamePanel" type="Panel" parent="."]
+margin_left = 115.0
+margin_top = 54.0
+margin_right = 173.0
+margin_bottom = 61.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakerText" type="Label" parent="SpeakerNamePanel"]
+margin_right = 363.0
+margin_bottom = 44.0
+rect_scale = Vector2( 0.16, 0.16 )
+theme = ExtResource( 3 )
+text = "Speaker Name"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="choice_selected" from="ChoiceOne" to="." method="_on_Choice_selected" binds= [ 0 ]]
+[connection signal="choice_selected" from="ChoiceTwo" to="." method="_on_Choice_selected" binds= [ 1 ]]
+[connection signal="choice_selected" from="ChoiceThree" to="." method="_on_Choice_selected" binds= [ 2 ]]
