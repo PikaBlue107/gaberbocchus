@@ -1,16 +1,21 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://world/objects/fish/Fish3.png" type="Texture" id=1]
 [ext_resource path="res://world/objects/fish/Fish2.png" type="Texture" id=2]
-[ext_resource path="res://world/environments/Dock/DockPosts.png" type="Texture" id=3]
-[ext_resource path="res://world/environments/Dock/DockBackground.png" type="Texture" id=4]
+[ext_resource path="res://world/environments/dock/DockPosts.png" type="Texture" id=3]
+[ext_resource path="res://world/environments/dock/DockBackground.png" type="Texture" id=4]
 [ext_resource path="res://world/objects/barrel/BarrelSmall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world/objects/barrel/BarrelLarge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://world/characters/player/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://world/characters/npcs/Dock/DockCharacter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://world/characters/npcs/dock/DockCharacter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world/objects/fish/DockFish.tscn" type="PackedScene" id=9]
-[ext_resource path="res://world/characters/npcs/Dock/DockCharacters.png" type="Texture" id=10]
+[ext_resource path="res://world/characters/npcs/dock/DockCharacters.png" type="Texture" id=10]
 [ext_resource path="res://ui/camera/LimitedCamera.tscn" type="PackedScene" id=11]
+[ext_resource path="res://world/utils/physics/interact/InteractClickbox.tscn" type="PackedScene" id=13]
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 12.0
+height = 10.0
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -97,7 +102,7 @@ position = Vector2( 500, 180 )
 [node name="Barrels" type="YSort" parent="YSort"]
 
 [node name="BarrelSmall" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 123, 138 )
+position = Vector2( 153, 138 )
 rotation = 0.00202298
 
 [node name="BarrelSmall3" parent="YSort/Barrels" instance=ExtResource( 5 )]
@@ -105,28 +110,42 @@ position = Vector2( 472, 138 )
 rotation = 0.00202298
 
 [node name="BarrelSmall4" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 399, 108 )
+position = Vector2( 265, 138 )
 rotation = 0.00202298
 
 [node name="BarrelSmall2" parent="YSort/Barrels" instance=ExtResource( 5 )]
 position = Vector2( 101, 108 )
 rotation = 0.00202298
 
-[node name="BarrelLarge" parent="YSort/Barrels" instance=ExtResource( 6 )]
-position = Vector2( 269, 132 )
+[node name="BarrelSmall5" parent="YSort/Barrels" instance=ExtResource( 5 )]
+position = Vector2( 53, 139 )
+rotation = 0.00202298
 
-[node name="Fisherman" parent="YSort" instance=ExtResource( 8 )]
+[node name="BarrelLarge" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 408, 115 )
+
+[node name="Quint" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 334, 142 )
 character_num = 2
 
-[node name="Fishing Rod" type="Sprite" parent="YSort/Fisherman"]
+[node name="Fishing Rod" type="Sprite" parent="YSort/Quint"]
 position = Vector2( 14, -7 )
 texture = ExtResource( 10 )
 hframes = 3
 frame = 2
 
-[node name="OtherDude" parent="YSort" instance=ExtResource( 8 )]
+[node name="InteractClickbox2" parent="YSort/Quint" instance=ExtResource( 13 )]
+position = Vector2( 0, -3 )
+collision_shape = SubResource( 10 )
+json_path = "res://world/environments/dock/dialogue_quint.json"
+
+[node name="Doc Hande" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 209, 112 )
+
+[node name="InteractClickbox" parent="YSort/Doc Hande" instance=ExtResource( 13 )]
+position = Vector2( 0, -3 )
+collision_shape = SubResource( 10 )
+json_path = "res://world/environments/dock/dialogue_doc_hande.json"
 
 [node name="DockPosts" type="Sprite" parent="."]
 position = Vector2( 266, 149 )
@@ -140,14 +159,14 @@ position = Vector2( 338, 83 )
 anim_start = 8.4
 
 [node name="DockFish2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 398, 176 )
+position = Vector2( 414, 175 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
 sprite_frames = SubResource( 4 )
 anim_start = 4.7
 
 [node name="DockFish3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 197, 175 )
+position = Vector2( 189, 175 )
 sprite_frames = SubResource( 7 )
 anim_start = 12.8
 
@@ -157,24 +176,5 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 sprite_frames = SubResource( 6 )
 anim_start = 0.9
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 88.0
-margin_bottom = 31.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer"]
-margin_right = 86.0
-margin_bottom = 29.0
-text = "Test text!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [editable path="YSort/Player/LimitedCamera"]
