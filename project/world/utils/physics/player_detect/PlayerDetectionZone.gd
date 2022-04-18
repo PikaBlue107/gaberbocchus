@@ -1,3 +1,4 @@
+class_name PlayerDetectionZone
 tool
 extends Area2D
 
@@ -38,10 +39,21 @@ func get_collision_shape() -> Shape2D:
 #--------Event Handlers--------
 ## When player enters our area, save a reference to them and signal up.
 func _on_PlayerDetectionZone_body_entered(body):
+	# check that the body is a player
+	if not _is_body_player(body):
+		return
+	# proceed
 	player = body
 	emit_signal("player_entered")
 
 ## When player exits out area, clear the reference and signal up.
 func _on_PlayerDetectionZone_body_exited(body):
+	if not _is_body_player(body):
+		return
+	# proceed
 	player = null
 	emit_signal("player_exited")
+	
+#--------Private Helpers--------
+func _is_body_player(body: Node) -> bool:
+	return body is Player
