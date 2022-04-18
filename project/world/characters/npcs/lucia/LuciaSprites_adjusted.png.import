@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LuciaSprites.png-771e9da40e0bed42bd5ea46a5724afb5.stex"
+path="res://.import/LuciaSprites_adjusted.png-24c7f832c8f92d0a63cb48919bbddf94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/characters/npcs/lucia/LuciaSprites.png"
-dest_files=[ "res://.import/LuciaSprites.png-771e9da40e0bed42bd5ea46a5724afb5.stex" ]
+source_file="res://world/characters/npcs/lucia/LuciaSprites_adjusted.png"
+dest_files=[ "res://.import/LuciaSprites_adjusted.png-24c7f832c8f92d0a63cb48919bbddf94.stex" ]
 
 [params]
 
