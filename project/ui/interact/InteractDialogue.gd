@@ -1,3 +1,4 @@
+class_name InteractDialogue
 extends Control
 
 
@@ -17,9 +18,12 @@ onready var choices = [$ChoiceOne, $ChoiceTwo, $ChoiceThree]
 onready var SpeakerText = $SpeakerNamePanel/SpeakerText
 
 #--------Resources--------
+# gui component handles any nxn image
 var face_dict = {
 	'ADEL': preload("res://ui/interact/faces/adel.png"),
 	'LUCIA': preload("res://ui/interact/faces/lucia.png"),
+	'QUINT': preload("res://ui/interact/faces/quint.png"),
+	'DOC HANDE': preload("res://ui/interact/faces/doc_hande.png")
 }
 
 
