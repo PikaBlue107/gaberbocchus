@@ -3,16 +3,13 @@ extends StaticBody2D
 
 #--------Exports--------
 export(Shape2D) var collision_shape setget set_collision_shape, get_collision_shape
-export var oneshot = true
 export(String, FILE, "*.json") var json_path setget set_json_path, get_json_path
+export(bool) var oneshot setget set_oneshot, get_oneshot
+export(bool) var midway_restartable setget set_midway_restartable, get_midway_restartable
 
-
-
-#--------Variables--------
-var completions = 0
 
 #--------Nodes--------
-onready var InteractDialogue = $CanvasLayer/InteractDialogue
+onready var InteractDialogueControl = $CanvasLayer/InteractDialogueControl
 
 
 #--------Resources--------
@@ -24,19 +21,19 @@ onready var InteractCursorTexture = \
 
 func _ready():
 	$ClickableArea.shape = collision_shape
-	InteractDialogue.visible = false
-	InteractDialogue.json_path = json_path
+	InteractDialogueControl.visible = false
+	InteractDialogueControl.json_path = json_path
+	print("InteractClickbox ready!")
 	
 #--------Setget Functions--------
 
 func set_json_path(value: String) -> void:
 	json_path = value
 	if is_inside_tree() and json_path != null:
-		$CanvasLayer/InteractDialogue.json_path = json_path
-
+		$CanvasLayer/InteractDialogueControl.json_path = json_path
 func get_json_path() -> String:
 	if is_inside_tree():
-		json_path = $CanvasLayer/InteractDialogue.json_path
+		json_path = $CanvasLayer/InteractDialogueControl.json_path
 	return json_path
 		
 # Link our exported CollisionShape to the one for the CollisionShape2D
@@ -54,6 +51,24 @@ func get_collision_shape() -> Shape2D:
 		collision_shape = $ClickableArea.shape
 	return collision_shape
 
+func set_oneshot(value: bool):
+	oneshot = value
+	if is_inside_tree():
+		$CanvasLayer/InteractDialogueControl.oneshot = value
+func get_oneshot() -> bool:
+	if is_inside_tree():
+		oneshot = $CanvasLayer/InteractDialogueControl.oneshot
+	return oneshot
+	
+func set_midway_restartable(value: bool):
+	midway_restartable = value
+	if is_inside_tree():
+		$CanvasLayer/InteractDialogueControl.midway_restartable = value
+func get_midway_restartable() -> bool:
+	if is_inside_tree():
+		midway_restartable = $CanvasLayer/InteractDialogueControl.midway_restartable
+	return midway_restartable
+
 #--------Event Handlers--------
 
 ## When player interacts with clickbox, start dialogue
@@ -61,25 +76,18 @@ func get_collision_shape() -> Shape2D:
 func _on_InteractClickbox_input_event(viewport, event, shape_idx):
 	# if interact event received, launch dialogue
 	if event.is_action_pressed("interact"):
-		
-		# if oneshot and we've already run it, don't start it again
-		if oneshot and completions > 0:
-			return
-		
-		# launch dialogue
-		InteractDialogue.visible = true
-		InteractDialogue.restart()
-
-
-## When dialogue finishes, mark it invisible and update our completion count
-func _on_InteractDialogue_dialogue_complete():
-	completions += 1
-	InteractDialogue.visible = false
+		Input.set_custom_mouse_cursor(null)
+		InteractDialogueControl.try_begin_dialogue()
 
 
 func _on_InteractClickbox_mouse_entered():
+	# if already completed and not oneshot, don' show cursor
+	if $CanvasLayer/InteractDialogueControl.completions > 0 and oneshot:
+		return
+	# if midway and not midway_restartable, don't show cursor
+	if $CanvasLayer/InteractDialogueControl.visible and not midway_restartable:
+		return
 	Input.set_custom_mouse_cursor(InteractCursorTexture)
-#	pass
 
 
 func _on_InteractClickbox_mouse_exited():
