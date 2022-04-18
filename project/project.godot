@@ -18,10 +18,34 @@ _global_script_classes=[ {
 "class": "Hurtbox",
 "language": "GDScript",
 "path": "res://world/utils/physics/hurtbox/Hurtbox.gd"
+}, {
+"base": "Control",
+"class": "InteractDialogue",
+"language": "GDScript",
+"path": "res://ui/interact/InteractDialogue.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Lucia",
+"language": "GDScript",
+"path": "res://world/characters/npcs/lucia/Lucia.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://world/characters/player/Player.gd"
+}, {
+"base": "Area2D",
+"class": "PlayerDetectionZone",
+"language": "GDScript",
+"path": "res://world/utils/physics/player_detect/PlayerDetectionZone.gd"
 } ]
 _global_script_class_icons={
 "Hitbox": "",
-"Hurtbox": ""
+"Hurtbox": "",
+"InteractDialogue": "",
+"Lucia": "",
+"Player": "",
+"PlayerDetectionZone": ""
 }
 
 [application]
