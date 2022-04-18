@@ -424,7 +424,6 @@ height = 6.0
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 5 )
-MAX_SPEED = 80.0
 ROLL_SPEED = 180.0
 
 [node name="MediumShadow" type="Sprite" parent="."]
@@ -439,7 +438,7 @@ vframes = 4
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+modulate = Color( 0, 0.6, 0.701961, 0.419608 )
 rotation = -1.5708
 shape = SubResource( 1 )
 
@@ -471,6 +470,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 position = Vector2( 0, -4 )
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
+modulate = Color( 0.701961, 0, 0, 0.419608 )
 position = Vector2( 18, 0 )
 collision_mask = 8
 script = ExtResource( 6 )
@@ -478,7 +478,7 @@ collision_shape = SubResource( 49 )
 disabled = true
 
 [node name="Hurtbox" parent="." instance=ExtResource( 2 )]
-visible = false
+modulate = Color( 0, 0.701961, 0.126134, 0.419608 )
 position = Vector2( 0, -6 )
 collision_layer = 4
 collision_shape = SubResource( 48 )
