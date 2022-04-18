@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://world/utils/physics/player_detect/PlayerDetectionZone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/interact/InteractDialogueControl.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/utils/physics/overlap_interact/PlayerOverlapDialogue.gd" type="Script" id=3]
+
+[node name="PlayerOverlapDialogue" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
+
+[node name="InteractDialogueControl" parent="CanvasLayer" index="0" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -88.0
+margin_top = 12.0
+margin_right = -88.0
+margin_bottom = 12.0
+
+[connection signal="player_entered" from="." to="." method="_on_PlayerOverlapDialogue_player_entered"]
