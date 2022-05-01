@@ -24,6 +24,9 @@ func try_begin_dialogue():
 	if visible and not midway_restartable:
 		return
 	
+	# pause scene tree
+	print("tree paused!")
+	get_tree().paused = true
 	# launch dialogue
 	visible = true
 	restart()
@@ -36,3 +39,5 @@ func try_begin_dialogue():
 func _on_InteractDialogueControl_dialogue_complete():
 	completions += 1
 	visible = false
+	# resume scene tree
+	get_tree().paused = false
