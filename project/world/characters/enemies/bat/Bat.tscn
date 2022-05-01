@@ -7,7 +7,7 @@
 [ext_resource path="res://world/utils/physics/hurtbox/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world/utils/stats/Stats.tscn" type="PackedScene" id=6]
 [ext_resource path="res://world/utils/physics/wander/WanderController.tscn" type="PackedScene" id=7]
-[ext_resource path="res://world/utils/physics/player_detect/PlayerDetectionZone.tscn" type="PackedScene" id=8]
+[ext_resource path="res://world/utils/physics/atoms/player_detect/PlayerDetectionZone.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world/utils/physics/soft_collision/SoftColllision.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CircleShape2D" id=7]
