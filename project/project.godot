@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "GameWorld",
+"language": "GDScript",
+"path": "res://world/GameWorld.gd"
+}, {
 "base": "Area2D",
 "class": "Hitbox",
 "language": "GDScript",
@@ -40,6 +45,7 @@ _global_script_classes=[ {
 "path": "res://world/utils/physics/player_detect/PlayerDetectionZone.gd"
 } ]
 _global_script_class_icons={
+"GameWorld": "",
 "Hitbox": "",
 "Hurtbox": "",
 "InteractDialogue": "",
@@ -51,13 +57,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Gaberbocchus"
-run/main_scene="res://world/World.tscn"
+run/main_scene="res://world/GameWorld.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 PlayerStats="*res://world/characters/player/PlayerStats.tscn"
-GlobalUtil="*res://world/GlobalUtil.gd"
+Utils="*res://world/Utils.gd"
 
 [debug]
 
