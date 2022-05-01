@@ -40,4 +40,7 @@ func _on_InteractDialogueControl_dialogue_complete():
 	completions += 1
 	visible = false
 	# resume scene tree
+	# defer the call so that we don't trigger another dialogue
+	call_deferred("_unpause") 
+func _unpause():
 	get_tree().paused = false
