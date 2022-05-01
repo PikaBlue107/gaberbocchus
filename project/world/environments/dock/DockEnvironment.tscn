@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://world/objects/fish/Fish3.png" type="Texture" id=1]
 [ext_resource path="res://world/objects/fish/Fish2.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://world/characters/npcs/lucia/LuciaFollowPlayer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://world/utils/physics/interact/click/InteractClickbox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://world/utils/physics/interact/overlap/PlayerOverlapDialogue.tscn" type="PackedScene" id=14]
+[ext_resource path="res://world/utils/physics/scene_change/overlap/PlayerOverlapSceneChange.tscn" type="PackedScene" id=15]
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 50.0
@@ -189,5 +190,9 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 sprite_frames = SubResource( 6 )
 anim_start = 0.9
+
+[node name="PlayerOverlapSceneChange" parent="." instance=ExtResource( 15 )]
+position = Vector2( 540, 128 )
+scene_name = "town"
 
 [editable path="YSort/Player/LimitedCamera"]
