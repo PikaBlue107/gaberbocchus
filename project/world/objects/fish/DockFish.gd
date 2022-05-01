@@ -13,6 +13,7 @@ export(SpriteFrames) var sprite_frames setget set_sprite_frames
 # Allow user to control the speed and start position of the animation
 export(float) var anim_speed = 1 setget set_anim_speed
 export(float) var anim_start = 0 setget set_anim_start
+export(bool) var interactable = true
 
 func set_anim_start(value):
 	anim_start = value
@@ -35,5 +36,6 @@ func _ready():
 		anim_sprite.frames = sprite_frames
 	anim_player.advance(anim_start)
 	anim_player.set_speed_scale(anim_speed)
+	$AnimatedSprite/InteractClickbox.visible = interactable
 
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://world/objects/fish/Fish1.png" type="Texture" id=1]
 [ext_resource path="res://world/objects/fish/DockFish.gd" type="Script" id=2]
 [ext_resource path="res://world/objects/fish/PathDrawer.gd" type="Script" id=3]
+[ext_resource path="res://world/utils/physics/interact/click/InteractClickbox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
@@ -19,6 +20,8 @@ animations = [ {
 "name": "default",
 "speed": 2.0
 } ]
+
+[sub_resource type="CircleShape2D" id=10]
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -81,6 +84,10 @@ modulate = Color( 1, 1, 1, 0.501961 )
 show_behind_parent = true
 frames = SubResource( 9 )
 playing = true
+
+[node name="InteractClickbox" parent="AnimatedSprite" instance=ExtResource( 4 )]
+collision_shape = SubResource( 10 )
+json_path = "res://world/objects/fish/interact_fish.json"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SwimPath"
