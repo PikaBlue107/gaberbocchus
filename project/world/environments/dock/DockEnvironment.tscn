@@ -1,11 +1,11 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://world/objects/fish/Fish3.png" type="Texture" id=1]
 [ext_resource path="res://world/objects/fish/Fish2.png" type="Texture" id=2]
 [ext_resource path="res://world/environments/dock/DockPosts.png" type="Texture" id=3]
 [ext_resource path="res://world/environments/dock/DockBackground.png" type="Texture" id=4]
-[ext_resource path="res://world/objects/barrel/BarrelSmall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://world/objects/barrel/BarrelLarge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://world/objects/barrel/BarrelLarge.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world/objects/barrel/BarrelSmall.tscn" type="PackedScene" id=6]
 [ext_resource path="res://world/characters/player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://world/characters/npcs/dock/DockCharacter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world/objects/fish/DockFish.tscn" type="PackedScene" id=9]
@@ -15,6 +15,9 @@
 [ext_resource path="res://world/utils/physics/interact/click/InteractClickbox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://world/utils/physics/interact/overlap/PlayerOverlapDialogue.tscn" type="PackedScene" id=14]
 [ext_resource path="res://world/utils/physics/scene_change/overlap/PlayerOverlapSceneChange.tscn" type="PackedScene" id=15]
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 0, 115, 188, 107, 256, 0 )
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 50.0
@@ -86,10 +89,15 @@ __meta__ = {
 }
 
 [node name="DockCollisionMesh" type="CollisionPolygon2D" parent="DockBackground"]
+visible = false
 polygon = PoolVector2Array( 0, 0, 500, 0, 500, 107, 92, 107, 92, 121, 76, 121, 76.0261, 107, 49, 107, 31, 147, 500, 147, 500, 180, 0, 180 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="InteractClickbox" parent="DockBackground" instance=ExtResource( 13 )]
+collision_shape = SubResource( 12 )
+json_path = "res://world/environments/dock/interact_boat.json"
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -115,28 +123,24 @@ json_path = "res://world/environments/dock/dialogue_story_1_dock_intro.json"
 
 [node name="Barrels" type="YSort" parent="YSort"]
 
-[node name="BarrelSmall" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 376, 137 )
-rotation = 0.00202298
-
-[node name="BarrelSmall3" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 423, 107 )
-rotation = 0.00202298
-
-[node name="BarrelSmall4" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 274, 137 )
-rotation = 0.00202298
-
-[node name="BarrelSmall2" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 101, 108 )
-rotation = 0.00202298
-
-[node name="BarrelSmall5" parent="YSort/Barrels" instance=ExtResource( 5 )]
-position = Vector2( 53, 139 )
-rotation = 0.00202298
-
-[node name="BarrelLarge" parent="YSort/Barrels" instance=ExtResource( 6 )]
+[node name="BarrelLarge" parent="YSort/Barrels" instance=ExtResource( 5 )]
 position = Vector2( 205, 107 )
+
+[node name="BarrelSmall" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 423, 107 )
+
+[node name="BarrelSmall2" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 376, 137 )
+
+[node name="BarrelSmall3" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 274, 137 )
+
+[node name="BarrelSmall4" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 101, 108 )
+
+[node name="BarrelSmall5" parent="YSort/Barrels" instance=ExtResource( 6 )]
+position = Vector2( 53, 139 )
+interactable = false
 
 [node name="Quint" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 137, 142 )
