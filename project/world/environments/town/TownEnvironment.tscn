@@ -28,24 +28,29 @@ texture = ExtResource( 1 )
 position = Vector2( -288, 219 )
 
 [node name="TownCollisionTop" type="CollisionPolygon2D" parent="TownBackground"]
+visible = false
 build_mode = 1
 polygon = PoolVector2Array( 0, 118, 0, 118, 1, 118, 4, 125, 12, 126, 12, 128, 16, 128, 19, 125, 24, 125, 26, 118, 38, 118, 38, 121, 40, 121, 43, 127, 47, 127, 49, 130, 53, 131, 53, 145, 190, 145, 190, 143, 216, 120, 216, 116, 264, 116, 264, 145, 401, 145, 401, 143, 423, 123, 423, 145, 432, 145, 432, 120, 438, 117, 441, 127, 448, 127, 461, 116, 482, 116, 482, 130, 489, 130, 490, 145, 621, 145, 621, 143, 640, 127, 640, -300, 0, -300 )
 
 [node name="TownCollisionBottom" type="CollisionPolygon2D" parent="TownBackground"]
+visible = false
 build_mode = 1
 polygon = PoolVector2Array( 640, 127, 640, 180, 0, 180, 0, 183, 643, 183, 643, 127 )
 
 [node name="WaterBarrlCollision" type="CollisionShape2D" parent="TownBackground"]
+modulate = Color( 0.396078, 0.611765, 0.858824, 1 )
 position = Vector2( 445, 128 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="AnvilCollision" type="CollisionShape2D" parent="TownBackground"]
+modulate = Color( 0.396078, 0.611765, 0.858824, 1 )
 position = Vector2( 477, 134 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TownBackground"]
+modulate = Color( 0.396078, 0.611765, 0.858824, 1 )
 position = Vector2( 34, 135 )
 shape = SubResource( 3 )
 
