@@ -1,0 +1,71 @@
+{
+  "dialogue_name": "STORY SCENE 1 - Dock Intro",
+  
+  "sequence": [
+    {
+      "type": "context",
+      "text": "[This text is skipped]"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "This text is spoken by Lucia!"
+    },
+    
+    {
+      "type": "context",
+      "text": "This text is also skipped"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "More text spoken by Lucia"
+    },
+    
+    {
+      "speaker": "ADEL",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Adel has a choice - this is the first option."
+        },
+        {
+          "text": "This is the second option."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "type": "choice_response",
+      "options": [
+        {
+          "text": "This is the response for the first choice."
+        },
+        {
+          "text": "This is the response for the second choice."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "This is a normal line spoken by Adel."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "This is a really long line spoken by Lucia that goes on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on and on."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "This is a shorter line spoken by Adel."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "This is a final line, spoken by Lucia."
+    }
+  ]
+}

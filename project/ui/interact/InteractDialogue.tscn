@@ -14,7 +14,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-json_path = "res://ui/interact/dialogue_story_1_dock_intro.json"
+json_path = "res://ui/interact/test_dialogue.json"
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 176.0
