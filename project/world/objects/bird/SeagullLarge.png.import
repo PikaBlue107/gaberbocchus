@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SeagullSmall.png-38bb7c72e7989f14e429b76e4e72024e.stex"
+path="res://.import/SeagullLarge.png-18f2378e6cdfb39ff3e88ff446bdfabf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/objects/seagull/SeagullSmall.png"
-dest_files=[ "res://.import/SeagullSmall.png-38bb7c72e7989f14e429b76e4e72024e.stex" ]
+source_file="res://world/objects/bird/SeagullLarge.png"
+dest_files=[ "res://.import/SeagullLarge.png-18f2378e6cdfb39ff3e88ff446bdfabf.stex" ]
 
 [params]
 
