@@ -57,6 +57,7 @@ config/icon="res://icon.png"
 [autoload]
 
 PlayerStats="*res://world/characters/player/PlayerStats.tscn"
+GlobalUtil="*res://world/GlobalUtil.gd"
 
 [debug]
 
