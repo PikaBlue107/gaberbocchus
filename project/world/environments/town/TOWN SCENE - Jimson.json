@@ -1,0 +1,71 @@
+{
+  "dialogue_name": "TOWN SCENE - Jimson",
+  
+  "sequence": [
+    {
+      "speaker": "JIMSON",
+      "text": "Why, hello there!"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "If it isn't Jimson Fiskars!"
+    },
+    
+    {
+      "speaker": "JIMSON",
+      "text": "It always is."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "I want you to meet my brother Adel."
+    },
+    
+    {
+      "speaker": "JIMSON",
+      "text": "You seem like a hardy kid. At least you’re tall. Fancy a pitchfork, boy?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "(Say no, say no, say no—)"
+    },
+    
+    {
+      "speaker": "JIMSON",
+      "text": "Did you know there are eleven kinds of pitchforks? I got ‘em all! One would go real well with that hat of yours."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Sure, I'll take a pitchfork."
+        },
+        {
+          "text": "No thanks."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "type": "choice_response",
+      "options": [
+        {
+          "text": "No. You’re already armed. I don’t need you in possession of any more sharp objects. Thanks Jimson, but we’ll be leaving now."
+        },
+        {
+          "text": "Oh no, how sad, so sorry Jimson, maybe next time."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "JIMSON",
+      "text": "Worth a try."
+    }
+  ]
+}

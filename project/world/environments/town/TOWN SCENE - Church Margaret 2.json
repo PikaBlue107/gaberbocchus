@@ -1,0 +1,20 @@
+{
+  "dialogue_name": "TOWN SCENE - Church Margaret 2",
+  
+  "sequence": [
+    {
+      "speaker": "MARGARET",
+      "text": "And before you ask, no, I don’t have a blind son."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "What?"
+    },
+    
+    {
+      "speaker": "MARGARET",
+      "text": "Especially not one that does parkour."
+    }
+  ]
+}

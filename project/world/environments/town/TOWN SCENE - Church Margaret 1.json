@@ -1,0 +1,45 @@
+{
+  "dialogue_name": "TOWN SCENE - Church Margaret 1",
+  
+  "sequence": [
+    {
+      "speaker": "MARGARET",
+      "text": "Hello, Lucia. Is this...?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Sister! It’s great to see you feeling better!"
+    },
+    
+    {
+      "speaker": "MARGARET",
+      "text": "I'm as well as can be expected."
+    },
+    
+    {
+      "speaker": "MARGARET",
+      "text": "Thank goodness. Oh, right—this is my brother, Adel. Adel, say hello."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "Hello."
+    },
+    
+    {
+      "speaker": "MARGARET",
+      "text": "It’s a great relief that you’re here, Adel. I will be praying for your journey. And for you, since you will be accompanied by Lucia."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Hey!"
+    },
+    
+    {
+      "speaker": "MARGARET",
+      "text": "Only kidding."
+    }
+  ] 
+}

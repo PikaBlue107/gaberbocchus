@@ -1,0 +1,55 @@
+{
+  "dialogue_name": "TOWN SCENE - Blacksmith Ferrum",
+  
+  "sequence": [
+    {
+      "speaker": "FERRUM",
+      "text": "Well, if it isn’t the bunny rabbit herself. How are you, Lucia?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Just fine."
+    },
+    
+    {
+      "speaker": "FERRUM",
+      "text": "Great to hear. How’s my order?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Fermenting. Give me another day or two, I’ll have it ready."
+    },
+    
+    {
+      "speaker": "FERRUM",
+      "text": "Sounds good. This the infamous brother?"
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "Infamous?"
+    },
+    
+    {
+      "speaker": "FERRUM",
+      "text": "Lucia likes to talk."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "Let's just say I've noticed."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Yes, this is Adel, my very non-famous brother."
+    },
+    
+    {
+      "speaker": "FERRUM",
+      "text": "Good to finally meet you."
+    }
+  ]
+}

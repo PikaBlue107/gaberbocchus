@@ -1,0 +1,127 @@
+{
+  "dialogue_name": "STORY SCENE 2 - Apothexposition",
+  
+  "sequence": [
+    {
+      "type": "context",
+      "text": "[[Adel and Lucia enter the apothecary.]"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Welcome to my humble shop. Also known as the only reason anyone in this town is still alive."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Wow, that’s a lot of books."
+        },
+        {
+          "text": "…You deal with a lot of injuries here?"
+        }
+      ]
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "type": "choice_response",
+      "options": [
+        {
+          "text": "Obviously I’ve got a lot of books, Adel, you don’t learn decades-worth of medical knowledge through trial and error." 
+        },
+        {
+          "text": "Yeah, Pansy has a tendency to get into knife accidents. Ironically, pansies are really only useful for skin and lung diseases. I use marigolds for her."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "…Okay. Anyway. You said something about explaining?"
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Right."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "We’re under siege. Or we’re about to be, anyway."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "There are… creatures in the forest. Dangerous ones. They used to stay in the deep woods, but they’ve become restless as of late… destroying crops, attacking townsfolk. One of them almost killed Sister Margaret. Couldn’t move her arm for weeks… I did what I could, of course."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "But we’re just not safe."
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "What do you need me for? I can protect you just fine, but I can’t be everywhere at once."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "I think I know how to stop it. But I can’t do it myself. I can’t fight those things. And… and I love this town, but the people here just don’t have your skill."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Most of the town avoids heading out to the woods, but I need to gather my herbs. There’s only so much you can garden. So I’m familiar with the area, to say the least. There are ruins everywhere in the deep woods—some kind of destroyed city. It’s been abandoned for a long time."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "But the monsters are coming from there, I’m certain of it. And if we can find the source…"
+    },
+    
+    {
+      "speaker": "ADEL",
+      "text": "We can end it."
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "text": "Exactly. Are you in?"
+    },
+    
+    {
+      "speaker": "ADEL",
+      "type": "choice",
+      "options": [
+        {
+          "text": "Got nothing better to do."
+        },
+        {
+          "text": "You sure about this? I'm only in if you're sure."
+        }
+      ]
+    },
+    
+    {
+      "speaker": "LUCIA",
+      "type": "choice_response",
+      "options": [
+        {
+          "text": "Alright. Tomorrow, then. Tonight, just… get some sleep. Head upstairs."
+        },
+        {
+          "text": "As sure as I’ve ever been. Head upstairs, get some sleep."
+        }
+      ]
+    }
+  ]
+}
+        
+        
+        
+        
+      
