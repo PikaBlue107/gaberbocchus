@@ -32,6 +32,7 @@ var dialogue_desc = {}
 var current_idx = -1
 var option_idx = -1
 var choice_active = false
+var is_single_text = false
 
 #--------Setget--------
 
@@ -48,6 +49,9 @@ func set_json_path(value: String) -> void:
 	
 	# Parse into JSON
 	dialogue_desc = JSON.parse(text).result
+	
+	# Check if there's a 'sequence' there, or if it's just a single text
+	is_single_text = not 'sequence' in dialogue_desc
 	
 	
 	
@@ -109,7 +113,9 @@ func _on_Choice_selected(selected_choice_idx):
 func _update_label():
 	var content = _get_dialogue_idx(current_idx)
 	var type = _get_dialogue_type(content)
-	var speaker = content.speaker
+	var speaker = ""
+	if 'speaker' in content:
+		speaker = content.speaker
 	
 	# Update speaker to match
 	SpeakerText.text = speaker.capitalize()
@@ -140,6 +146,15 @@ func _update_label():
 
 ## Get the Dictionary object for the given index
 func _get_dialogue_idx(idx: int):
+	# if it's a single text, handle differently
+	if is_single_text:
+		# if idx != 0, complain
+		if idx != 0:
+			return null
+		# return the one text
+		return dialogue_desc
+	
+	# otherwise, if it's past the sequence bounds, complain
 	if idx < 0 or idx >= dialogue_desc.sequence.size():
 		return null
 	return dialogue_desc.sequence[idx]
@@ -154,6 +169,12 @@ func _get_dialogue_type(obj: Dictionary):
 
 ## Check whether there is a next dialogue element, ignoring context
 func _has_next_dialogue():
+	# if it's a single text, handle differently
+	if is_single_text:
+		# can only have a next dialogue if next_idx == 0
+		return current_idx == -1
+	
+	# multiple sequence of text
 	var next_idx = current_idx + 1
 	# check for trailing context - while inbounds and next is context, skip
 	while next_idx < dialogue_desc.sequence.size() and \
@@ -168,6 +189,10 @@ func _get_next_dialogue_idx():
 	# check to make sure there is a next dialogue
 	if !_has_next_dialogue():
 		return null
+		
+	# if it's a single text, handle differently
+	if is_single_text:
+		return 0
 	
 	var next_idx = current_idx + 1
 	# check for trailing context - while inbounds and next is context, skip
