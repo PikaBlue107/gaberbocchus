@@ -6,6 +6,8 @@
 
 [node name="PlayerOverlapDialogue" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
+json_path = "res://ui/interact/test_dialogue.json"
+oneshot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 

@@ -110,8 +110,7 @@ position = Vector2( 334, 129 )
 [node name="PlayerOverlapDialogue" parent="YSort/LuciaFollowPlayer" instance=ExtResource( 14 )]
 position = Vector2( 0, 1 )
 collision_shape = SubResource( 11 )
-json_path = "res://ui/interact/dialogue_story_1_dock_intro.json"
-oneshot = true
+json_path = "res://world/environments/dock/dialogue_story_1_dock_intro.json"
 
 [node name="Barrels" type="YSort" parent="YSort"]
 

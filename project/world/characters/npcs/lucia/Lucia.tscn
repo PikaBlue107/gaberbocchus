@@ -3,7 +3,7 @@
 [ext_resource path="res://world/utils/physics/hurtbox/Hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world/characters/npcs/lucia/Lucia.gd" type="Script" id=2]
 [ext_resource path="res://world/characters/npcs/lucia/LuciaSprites_adjusted.png" type="Texture" id=3]
-[ext_resource path="res://world/objects/shadows/MediumShadow.png" type="Texture" id=4]
+[ext_resource path="res://world/objects/shadow/MediumShadow.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0

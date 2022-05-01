@@ -13,7 +13,7 @@ collision_mask = 0
 input_pickable = true
 script = ExtResource( 1 )
 collision_shape = SubResource( 1 )
-json_path = "res://ui/interact/dialogue_story_1_dock_intro.json"
+json_path = "res://ui/interact/test_dialogue.json"
 oneshot = true
 
 [node name="ClickableArea" type="CollisionShape2D" parent="."]
@@ -24,6 +24,7 @@ shape = SubResource( 1 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="InteractDialogueControl" parent="CanvasLayer" instance=ExtResource( 3 )]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -88.0
