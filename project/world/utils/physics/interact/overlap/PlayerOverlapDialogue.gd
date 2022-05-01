@@ -18,7 +18,7 @@ onready var InteractDialogueControl = $CanvasLayer/InteractDialogueControl
 func _ready():
 	InteractDialogueControl.visible = false
 	InteractDialogueControl.json_path = json_path
-	print("PlayerOverlapDialogue ready!")
+#	print("PlayerOverlapDialogue ready!")
 	
 #--------Setget Functions--------
 

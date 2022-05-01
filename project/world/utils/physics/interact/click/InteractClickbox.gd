@@ -23,7 +23,7 @@ func _ready():
 	$ClickableArea.shape = collision_shape
 	InteractDialogueControl.visible = false
 	InteractDialogueControl.json_path = json_path
-	print("InteractClickbox ready!")
+#	print("InteractClickbox ready!")
 	
 #--------Setget Functions--------
 

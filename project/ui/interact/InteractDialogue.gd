@@ -61,12 +61,12 @@ func advance_dialogue():
 	
 	# if at end, emit signal instead
 	if !_has_next_dialogue():
-		print("no next dialogue")
+#		print("no next dialogue")
 		emit_signal("dialogue_complete")
 #		restart() # todo remove
 		return
 	
-	print("moving forward")
+#	print("moving forward")
 	# move forward and update label
 	current_idx = _get_next_dialogue_idx()
 	_update_label()
@@ -84,7 +84,7 @@ func restart():
 
 ## On ready, read in the dialogue JSON and start on the first panel.
 func _ready():
-	print("Created new InteractDialogue!")
+#	print("Created new InteractDialogue!")
 	# Move to the first dialogue panel
 	advance_dialogue()
 

@@ -25,7 +25,7 @@ func try_begin_dialogue():
 		return
 	
 	# pause scene tree
-	print("tree paused!")
+#	print("tree paused!")
 	get_tree().paused = true
 	# launch dialogue
 	visible = true
