@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vagrant toward movement.png-dea41537e3d1bd7efc26a8d0d2a1a45d.stex"
+path="res://.import/vagrant_movement.png-234c2a7b1cf11b5127b1b4edad5a1aef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/characters/npcs/vagrant/vagrant toward movement.png"
-dest_files=[ "res://.import/vagrant toward movement.png-dea41537e3d1bd7efc26a8d0d2a1a45d.stex" ]
+source_file="res://world/characters/npcs/town/vagrant/vagrant_movement.png"
+dest_files=[ "res://.import/vagrant_movement.png-234c2a7b1cf11b5127b1b4edad5a1aef.stex" ]
 
 [params]
 
