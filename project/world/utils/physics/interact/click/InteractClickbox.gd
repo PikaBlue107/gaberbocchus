@@ -73,7 +73,7 @@ func get_midway_restartable() -> bool:
 
 ## When player interacts with clickbox, start dialogue
 ## as long as this isn't a finished oneshot
-func _on_InteractClickbox_input_event(viewport, event, shape_idx):
+func _on_InteractClickbox_input_event(_viewport, event, _shape_idx):
 	# if interact event received, launch dialogue
 	if event.is_action_pressed("interact"):
 		Input.set_custom_mouse_cursor(null)
@@ -91,4 +91,5 @@ func _on_InteractClickbox_mouse_entered():
 
 
 func _on_InteractClickbox_mouse_exited():
+	# TODO: bug - if mouse is under another clickbox, skip this
 	Input.set_custom_mouse_cursor(null)
