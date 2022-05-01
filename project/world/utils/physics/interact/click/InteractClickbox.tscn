@@ -1,25 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://world/utils/physics/interact/click/InteractClickbox.gd" type="Script" id=1]
 [ext_resource path="res://ui/interact/InteractDialogueControl.tscn" type="PackedScene" id=3]
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 12.0
-height = 10.0
 
 [node name="InteractClickbox" type="StaticBody2D"]
 collision_layer = 128
 collision_mask = 0
 input_pickable = true
 script = ExtResource( 1 )
-collision_shape = SubResource( 1 )
 json_path = "res://ui/interact/test_dialogue.json"
 oneshot = true
 
 [node name="ClickableArea" type="CollisionShape2D" parent="."]
 modulate = Color( 0, 0.6, 0.701961, 0.419608 )
-position = Vector2( 0, -5 )
-shape = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
