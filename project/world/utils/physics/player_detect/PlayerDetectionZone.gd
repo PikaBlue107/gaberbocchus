@@ -27,9 +27,11 @@ var player = null
 # Link our exported CollisionShape to the one for the CollisionShape2D
 func set_collision_shape(value: Shape2D):
 	collision_shape = value
-	if not is_inside_tree():
-		yield(self, 'ready')
-	$CollisionShape2D.shape = collision_shape
+#	if not is_inside_tree():
+#		yield(self, 'ready')
+#	$CollisionShape2D.shape = collision_shape
+	if is_inside_tree():
+		$CollisionShape2D.shape = collision_shape
 func get_collision_shape() -> Shape2D:
 	if is_inside_tree():
 		collision_shape = $CollisionShape2D.shape
@@ -37,6 +39,11 @@ func get_collision_shape() -> Shape2D:
 
 
 #--------Event Handlers--------
+
+## When this script is ready, update the CollisionShape2D with ours.
+func _ready():
+	$CollisionShape2D.shape = collision_shape
+	
 ## When player enters our area, save a reference to them and signal up.
 func _on_PlayerDetectionZone_body_entered(body):
 	# check that the body is a player
@@ -51,9 +58,11 @@ func _on_PlayerDetectionZone_body_exited(body):
 	if not _is_body_player(body):
 		return
 	# proceed
-	player = null
+	player = body
 	emit_signal("player_exited")
 	
 #--------Private Helpers--------
+
+## Detect if a Node is the Player we're trying to find
 func _is_body_player(body: Node) -> bool:
 	return body is Player
