@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://world/objects/barrel/BarrelLarge.png" type="Texture" id=1]
+[ext_resource path="res://world/utils/physics/interact/click/InteractClickbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/utils/physics/interact/click/ClickboxVisibilityController.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
 height = 8.0
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 16.0
+height = 6.0
+
 [node name="BarrelLarge" type="StaticBody2D"]
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -16,3 +23,7 @@ modulate = Color( 0, 0.6, 0.701961, 0.419608 )
 position = Vector2( 0, 6 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="InteractClickbox" parent="." instance=ExtResource( 2 )]
+collision_shape = SubResource( 2 )
+json_path = "res://world/objects/barrel/interact_barrel_big.json"
