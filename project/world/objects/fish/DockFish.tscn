@@ -69,6 +69,7 @@ tracks/1/keys = {
 }
 
 [node name="DockFish" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 2 )
 sprite_frames = SubResource( 9 )
 
@@ -79,7 +80,6 @@ script = ExtResource( 3 )
 modulate = Color( 1, 1, 1, 0.501961 )
 show_behind_parent = true
 frames = SubResource( 9 )
-frame = 1
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
