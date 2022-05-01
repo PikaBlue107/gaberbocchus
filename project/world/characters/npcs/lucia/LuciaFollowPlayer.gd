@@ -36,11 +36,13 @@ func _on_CloseEnoughZone_player_entered():
 
 func _on_CloseEnoughZone_player_exited():
 	player_follow = true
+	Player = $BeginFollowZone.player
 
 
 func _on_BackUpZone_player_entered():
 	player_follow = true
 	flee = true
+	Player = $BeginFollowZone.player
 
 func _on_BackUpZone_player_exited():
 	player_follow = false
