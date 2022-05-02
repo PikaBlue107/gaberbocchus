@@ -13,7 +13,6 @@ signal player_exited
 
 #--------Exports--------
 export(Shape2D) var collision_shape setget set_collision_shape, get_collision_shape
-export var damage = 1
 
 
 #--------Public Fields--------
@@ -27,9 +26,6 @@ var player = null
 # Link our exported CollisionShape to the one for the CollisionShape2D
 func set_collision_shape(value: Shape2D):
 	collision_shape = value
-#	if not is_inside_tree():
-#		yield(self, 'ready')
-#	$CollisionShape2D.shape = collision_shape
 	if is_inside_tree():
 		$CollisionShape2D.shape = collision_shape
 func get_collision_shape() -> Shape2D:
