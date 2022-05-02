@@ -28,8 +28,9 @@ var face_dict = {
 	'JABBERWOCKY': preload("res://ui/interact/faces/jabberwocky.png"),
 	'JIMSON': preload("res://ui/interact/faces/farmer.png"),
 	'MARGARET': preload("res://ui/interact/faces/nun.png"),
-	'SPIRIT ORB': preload("res://ui/interact/faces/spirit_orb.png"),
-	'VAGRANT': preload("res://ui/interact/faces/vagrant.png")
+	'SPIRIT': preload("res://ui/interact/faces/spirit_orb.png"),
+	'HESCHIER': preload("res://ui/interact/faces/vagrant.png"),
+	'PANSY': preload("res://ui/interact/faces/butcher.png")
 }
 
 
