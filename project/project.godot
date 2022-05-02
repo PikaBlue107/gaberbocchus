@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://world/utils/physics/hurtbox/Hurtbox.gd"
 }, {
+"base": "Area2D",
+"class": "InputDetectionZone",
+"language": "GDScript",
+"path": "res://world/utils/physics/atoms/input_event/InputDetectionZone.gd"
+}, {
 "base": "Control",
 "class": "InteractDialogue",
 "language": "GDScript",
@@ -39,19 +44,32 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://world/characters/player/Player.gd"
 }, {
-"base": "Reference",
+"base": "Area2D",
 "class": "PlayerDetectionZone",
 "language": "GDScript",
 "path": "res://world/utils/physics/atoms/player_detect/PlayerDetectionZone.gd"
+}, {
+"base": "Area2D",
+"class": "TargetDetectionZone",
+"language": "GDScript",
+"path": "res://world/utils/physics/atoms/target_detect/TargetDetectionZone.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "WalkingNPC",
+"language": "GDScript",
+"path": "res://world/characters/npcs/WalkingNPC.gd"
 } ]
 _global_script_class_icons={
 "GameWorld": "",
 "Hitbox": "",
 "Hurtbox": "",
+"InputDetectionZone": "",
 "InteractDialogue": "",
 "Lucia": "",
 "Player": "",
-"PlayerDetectionZone": ""
+"PlayerDetectionZone": "",
+"TargetDetectionZone": "",
+"WalkingNPC": ""
 }
 
 [application]
