@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world/utils/physics/atoms/input_event/InputDetectionZone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/utils/physics/scene_change/click/InteractSceneChange.gd" type="Script" id=2]
+
+[node name="InteractSceneChange" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[connection signal="event_occurred" from="." to="." method="_on_InteractSceneChange_event_occurred"]
+[connection signal="mouse_entered" from="." to="." method="_on_InteractSceneChange_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_InteractSceneChange_mouse_exited"]
