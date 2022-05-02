@@ -84,8 +84,9 @@
     
     {
       "speaker": "ACCEPT?",
-      "type": "choice_response",
-      "choices": [
+      "type": "choice",
+      "save": "accept_spirit",
+      "options": [
         {
           "text": "Yes"
         },
@@ -94,11 +95,10 @@
         }
       ]
     },
-    
     {
       "speaker": "SPIRIT",
       "type": "choice_response",
-      "responses": [
+      "options": [
         {
           "text": "Thank you."
         },
