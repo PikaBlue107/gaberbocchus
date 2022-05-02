@@ -11,10 +11,10 @@ onready var Contents = $Contents
 const scenes : Dictionary = {  # Dictionary[String, PackedScene]
 	"dock": preload("res://world/environments/dock/DockEnvironment.tscn"),
 	"town": preload("res://world/environments/town/TownEnvironment.tscn"),
-	"apothecary_groundfloor": null,
-	"apothecary_hallway": null,
-	"apothecary_bedroom": null,
-	"dream": null,
+	"apothecary_groundfloor": preload("res://world/environments/apothecary/ground_floor/GroundFloorEnvironment.tscn"),
+	"apothecary_hallway": preload("res://world/environments/apothecary/2floor_hallway/HallwayEnvironment.tscn"),
+	"apothecary_bedroom": preload("res://world/environments/apothecary/bedroom/BedroomEnvironment.tscn"),
+	"dream": preload("res://world/environments/dream/DreamEnvironment.tscn"),
 	"forest": null,
 	"temple_exterior": null,
 	"temple_entrance": null,
@@ -23,13 +23,17 @@ const scenes : Dictionary = {  # Dictionary[String, PackedScene]
 	"temple_arena": null
 }
 
-func change_scene(scene_name: String):
+func change_scene(scene_name: String,
+	fade_out_duration: float = FADE_TIME,
+	fade_in_duration: float = FADE_TIME):
 	
 #	print("GameWorld.change_scene(" + scene_name + ")")
 	
 	# Ensure the scene we want is in the map
 	assert(scene_name in scenes, "ERROR: Tried to load scene \"" + scene_name + \
 		"\", but there isn't an entry for that name in GlobalUtil.change_scene()!")
+	assert(scenes[scene_name] != null, "ERROR: Tried to load scene \"" + scene_name + \
+		"\", but it's still `null` in GlobalUtil.change_scene()!")
 	
 	# Pause the game
 	get_tree().paused = true
@@ -37,7 +41,7 @@ func change_scene(scene_name: String):
 	# Fade to black
 	# create a FadeModulate to handle the transition
 	# config
-	FadeModulate.fade_duration = FADE_TIME
+	FadeModulate.fade_duration = fade_out_duration
 	FadeModulate.target_color = Color.black
 	# launch
 	FadeModulate.start()
@@ -53,6 +57,7 @@ func change_scene(scene_name: String):
 	Contents.add_child(NewScene)
 	
 	# Fade back in
+	FadeModulate.fade_duration = fade_in_duration
 	FadeModulate.target_color = Color.white
 	FadeModulate.restart()
 	# Wait for it to finish
