@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/adel_dream_movement.png-9d9a1ec517661de5ebdafe65fb0d6576.stex"
+path="res://.import/adel_dream_movement.png-39b643167b5b398b19251a9ced900f1a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/environments/dream/adel_movement/adel_dream_movement.png"
-dest_files=[ "res://.import/adel_dream_movement.png-9d9a1ec517661de5ebdafe65fb0d6576.stex" ]
+source_file="res://world/environments/dream/adel_dream_movement.png"
+dest_files=[ "res://.import/adel_dream_movement.png-39b643167b5b398b19251a9ced900f1a.stex" ]
 
 [params]
 
