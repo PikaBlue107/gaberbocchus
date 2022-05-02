@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://world/environments/apothecary/bedroom/background.png" type="Texture" id=1]
+[ext_resource path="res://world/utils/physics/scene_change/click/InteractSceneChange.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/characters/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world/environments/any/BlackBackground.png" type="Texture" id=4]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( -2, -2, 23, -2, 32, 15, 32, 28, 8, 28, -2, 7 )
+
+[node name="BedroomScene" type="Node2D"]
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="BlackBackground" type="Sprite" parent="Background"]
+position = Vector2( 161.5, 91.5 )
+scale = Vector2( 11.0938, 6.71875 )
+texture = ExtResource( 4 )
+
+[node name="SpriteBackground" type="Sprite" parent="Background"]
+position = Vector2( 121, 58 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionPolygonTop" type="CollisionPolygon2D" parent="Background"]
+visible = false
+polygon = PoolVector2Array( 153, 122, 122, 122, 138, 90, 182, 90, 185, 95, 166, 95, 166, 99, 175, 117, 196, 117, 198, 122, 167, 122, 170, 128, 199, 128, 198, 58, 121, 58, 121, 128, 150, 128 )
+
+[node name="CollisionPolygonBottom" type="CollisionPolygon2D" parent="Background"]
+visible = false
+polygon = PoolVector2Array( 170, 128, 170, 129, 150, 129, 150, 128 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 123 )
+
+[node name="InteractSceneChange" parent="." instance=ExtResource( 2 )]
+position = Vector2( 166, 92 )
+collision_shape = SubResource( 1 )
+scene_name = "dream"

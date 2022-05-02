@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://world/utils/physics/scene_change/click/InteractSceneChange.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/characters/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/environments/apothecary/2floor_hallway/background.png" type="Texture" id=3]
+[ext_resource path="res://world/environments/any/BlackBackground.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 17 )
+
+[node name="HallwayEnvironment" type="Node2D"]
+
+[node name="Background" type="StaticBody2D" parent="."]
+
+[node name="BlackBackground" type="Sprite" parent="Background"]
+position = Vector2( 180.5, 88.5 )
+scale = Vector2( 12.2813, 6.53125 )
+texture = ExtResource( 4 )
+
+[node name="BackgroundSprite" type="Sprite" parent="Background"]
+position = Vector2( 43, 53 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="CollisionPolygonTop" type="CollisionPolygon2D" parent="Background"]
+visible = false
+polygon = PoolVector2Array( 48, 117, 58, 117, 72, 103, 72, 99, 164, 99, 164, 101, 173, 101, 173, 99, 268, 99, 276, 107, 268, 107, 283, 122, 283, 51, 43, 51, 43, 122 )
+
+[node name="CollisionPolygonBottom" type="CollisionPolygon2D" parent="Background"]
+visible = false
+polygon = PoolVector2Array( 283, 122, 283, 123, 43, 123, 43, 122 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 258, 101 )
+
+[node name="InteractSceneChange" parent="." instance=ExtResource( 1 )]
+position = Vector2( 95, 83 )
+collision_shape = SubResource( 1 )
+scene_name = "apothecary_bedroom"
