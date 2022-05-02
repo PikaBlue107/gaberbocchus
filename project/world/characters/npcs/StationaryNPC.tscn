@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://world/characters/npcs/StationaryNPC.gd" type="Script" id=1]
 [ext_resource path="res://world/characters/npcs/town/blacksmith/blacksmith.png" type="Texture" id=2]
+[ext_resource path="res://world/objects/shadow/MediumShadow.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.00001
@@ -10,6 +11,10 @@ height = 5.99998
 [node name="StationaryNPC" type="StaticBody2D"]
 script = ExtResource( 1 )
 sprite_texture = ExtResource( 2 )
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( 0, 1 )
+texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -8 )
