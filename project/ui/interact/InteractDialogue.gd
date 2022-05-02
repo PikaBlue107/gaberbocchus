@@ -5,6 +5,7 @@ extends Control
 #--------Signals--------
 signal dialogue_begin
 signal dialogue_complete
+signal dialogue_advance
 
 
 #--------Exports--------
@@ -81,6 +82,7 @@ func advance_dialogue():
 	# move forward and update label
 	current_idx = _get_next_dialogue_idx()
 	_update_label()
+	emit_signal("dialogue_advance")
 
 func restart():
 	current_idx = -1
