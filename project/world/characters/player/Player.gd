@@ -120,12 +120,7 @@ func roll_anim_finish():
 	
 func attack_state_end():
 	state = MOVE
-#	anim_state.travel("Move") # workaround - this should happen on its own, but w/e
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Hurtbox_area_entered(area):
