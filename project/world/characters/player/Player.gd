@@ -13,7 +13,7 @@ export(float) var ROLL_SPEED = MAX_SPEED * 1.5
 # Used to update position every frame
 var velocity = Vector2.ZERO
 # remember direction we're facing
-var facing = Vector2.DOWN
+var facing = Vector2.DOWN setget set_facing
 
 # State machine
 
@@ -24,7 +24,6 @@ enum {
 }
 
 var state = MOVE
-
 
 
 # ANIMATIONS
@@ -40,6 +39,17 @@ onready var hurtbox = $Hurtbox
 
 var stats = PlayerStats
 
+func set_facing(value):
+	facing = value.normalized()
+	# set sword hitbox based on direction
+	swordHitbox.knockback_vector = facing
+	# set animations based on direction
+	anim_tree.set("parameters/Idle/blend_position", facing)
+	anim_tree.set("parameters/Run/blend_position", facing)
+	anim_tree.set("parameters/Attack/blend_position", facing)
+	anim_tree.set("parameters/Roll/blend_position", facing)
+	
+	
 func _ready():
 	anim_tree.active = true
 	swordHitbox.knockback_vector = facing
@@ -71,18 +81,17 @@ func move_state(delta):
 	
 	# if some input applied
 	if input_vector != Vector2.ZERO:
-		facing = input_vector
-		swordHitbox.knockback_vector = facing
+		
+		# trigger setget update
+		self.facing = input_vector
+		
 		# accelerate in direction of movement
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		
 		# play animation to move
-		# set blend position based on direction
-		anim_tree.set("parameters/Idle/blend_position", input_vector)
-		anim_tree.set("parameters/Run/blend_position", input_vector)
-		anim_tree.set("parameters/Attack/blend_position", input_vector)
-		anim_tree.set("parameters/Roll/blend_position", input_vector)
 		# change state to be running
 		anim_state.travel("Run")
+		
 	# if no input
 	else:
 		# decelerate
@@ -120,8 +129,6 @@ func roll_anim_finish():
 	
 func attack_state_end():
 	state = MOVE
-
-
 
 func _on_Hurtbox_area_entered(area):
 	if !hurtbox.invincible:
