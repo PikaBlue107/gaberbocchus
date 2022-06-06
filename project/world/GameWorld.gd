@@ -24,6 +24,7 @@ const scenes : Dictionary = {  # Dictionary[String, PackedScene]
 }
 
 func change_scene(scene_name: String,
+	scene_spawn_setup: int = 0,
 	fade_out_duration: float = FADE_TIME,
 	fade_in_duration: float = FADE_TIME):
 	
@@ -42,7 +43,7 @@ func change_scene(scene_name: String,
 	# create a FadeModulate to handle the transition
 	# config
 	FadeModulate.fade_duration = fade_out_duration
-	FadeModulate.target_color = Color.black
+	FadeModulate.target_color = Color.white # TODO: .black
 	# launch
 	FadeModulate.start()
 	# Wait for it to finish
@@ -53,6 +54,9 @@ func change_scene(scene_name: String,
 	Utils.delete_children(Contents)
 	# Create an instance of the desired scene
 	var NewScene = scenes[scene_name].instance()
+	# Set its spawn setup
+	if "spawn_setup" in NewScene:
+		NewScene.spawn_setup = scene_spawn_setup
 	# Add that scene to the World
 	Contents.add_child(NewScene)
 	

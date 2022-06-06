@@ -68,5 +68,5 @@ func _on_InteractDialogueControl_dialogue_complete():
 	
 	# switch scenes with a slow fadeout
 	var World = get_node("/root/GameWorld") # as GameWorld # causes circular dependency
-	World.change_scene("dock", 5.0, 3.0) # TODO: replace with forest
+	World.change_scene("dock", 0, 5.0, 3.0) # TODO: replace with forest
 

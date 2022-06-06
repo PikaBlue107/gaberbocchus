@@ -34,7 +34,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://ui/interact/InteractDialogue.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "WalkingNPC",
 "class": "Lucia",
 "language": "GDScript",
 "path": "res://world/characters/npcs/lucia/Lucia.gd"
@@ -48,6 +48,11 @@ _global_script_classes=[ {
 "class": "PlayerDetectionZone",
 "language": "GDScript",
 "path": "res://world/utils/physics/atoms/player_detect/PlayerDetectionZone.gd"
+}, {
+"base": "Node2D",
+"class": "PositionAndDirection",
+"language": "GDScript",
+"path": "res://world/utils/physics/atoms/position_direction/PositionAndDirection.gd"
 }, {
 "base": "Area2D",
 "class": "TargetDetectionZone",
@@ -68,6 +73,7 @@ _global_script_class_icons={
 "Lucia": "",
 "Player": "",
 "PlayerDetectionZone": "",
+"PositionAndDirection": "",
 "TargetDetectionZone": "",
 "WalkingNPC": ""
 }
