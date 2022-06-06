@@ -12,11 +12,9 @@ func _ready():
 
 func _on_Timer_timeout():
 	# Change state
-	if state == MOVE:
-		move_right = not move_right
-		state = IDLE
-		facing = Vector2.DOWN
-		anim_tree.set("parameters/Idle/blend_position", facing)
+	if input_vector:
+		input_vector = Vector2.ZERO # stop moving
+		self.facing = Vector2.DOWN # face forwards, trigger setget
 	else:
-		state = MOVE
+		move_right = not move_right
 		input_vector = Vector2.RIGHT if move_right else Vector2.LEFT

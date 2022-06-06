@@ -274,7 +274,7 @@ states/Run/node = SubResource( 22 )
 states/Run/position = Vector2( 1073, 163 )
 transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 24 ), "Idle", "Attack", SubResource( 34 ), "Attack", "Idle", SubResource( 35 ), "Roll", "Idle", SubResource( 46 ), "Idle", "Roll", SubResource( 47 ) ]
 start_node = "Idle"
-graph_offset = Vector2( 0, -35.062 )
+graph_offset = Vector2( 0, -14.758 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
@@ -300,6 +300,7 @@ rotation = -1.5708
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 3.0
 anims/IdleDown = SubResource( 10 )
 anims/IdleLeft = SubResource( 9 )
 anims/IdleRight = SubResource( 7 )
@@ -313,6 +314,7 @@ anims/RunUp = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 12 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
 parameters/Idle/blend_position = Vector2( 0, 1 )
